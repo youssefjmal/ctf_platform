@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { challengeService } from '../../services/challengeService';
 import type { Challenge } from '../../services/challengeService';
-import { submissionService } from '../../services/submissioService';
+import { submissionService } from '../../services/submissionService';
 import { useAuth } from '../../hooks/useAuth';
 import Button from '../common/Button';
 import Input from '../common/Input';

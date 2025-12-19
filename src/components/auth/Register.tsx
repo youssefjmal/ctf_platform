@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { authService } from '../../services/authService';
 import Input from '../common/Input';
 import Button from '../common/Button';
-import './Auth.css';
+import './Register.css';
 
 const Register: React.FC = () => {
   const [formData, setFormData] = useState({

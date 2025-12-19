@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
-import { submissionService,type Submission} from '../services/submissioService';
+import { submissionService,type Submission} from '../services/submissionService';
 import './Profile.css';
 
 const Profile: React.FC = () => {
