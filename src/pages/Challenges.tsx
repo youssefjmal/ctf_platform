@@ -8,7 +8,7 @@ const Challenges: React.FC = () => {
     <div className="challenges-page">
       <Sidebar />
       <div className="challenges-content">
-        <h1>🎯 Challenges</h1>
+        <h1> Challenges</h1>
         <ChallengeList />
       </div>
     </div>

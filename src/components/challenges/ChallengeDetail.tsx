@@ -52,7 +52,7 @@ const ChallengeDetail: React.FC = () => {
         const updatedChallenge = await challengeService.getChallengeById(id);
         setChallenge(updatedChallenge);
       } else {
-        setMessage({ type: 'error', text: '❌ Incorrect flag. Try again!' });
+        setMessage({ type: 'error', text: ' Incorrect flag. Try again!' });
       }
     } catch (error: any) {
       setMessage({ type: 'error', text: error.response?.data?.error || 'Submission failed' });
@@ -73,10 +73,10 @@ const ChallengeDetail: React.FC = () => {
       </div>
 
       <div className="challenge-detail-info">
-        <span className="info-item">📁 {challenge.category}</span>
-        <span className="info-item">📊 {challenge.difficulty}</span>
-        <span className="info-item">⭐ {challenge.points} points</span>
-        <span className="info-item">👥 {challenge.solves} solves</span>
+        <span className="info-item"> {challenge.category}</span>
+        <span className="info-item"> {challenge.difficulty}</span>
+        <span className="info-item"> {challenge.points} points</span>
+        <span className="info-item"> {challenge.solves} solves</span>
       </div>
 
       <div className="challenge-detail-content">

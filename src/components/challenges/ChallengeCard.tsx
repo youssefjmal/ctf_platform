@@ -31,8 +31,8 @@ const ChallengeCard: React.FC<ChallengeCardProps> = ({ challenge }) => {
         <span className={`challenge-difficulty ${getDifficultyColor(challenge.difficulty)}`}>
           {challenge.difficulty}
         </span>
-        <span className="challenge-points">⭐ {challenge.points} pts</span>
-        <span className="challenge-solves">👥 {challenge.solves} solves</span>
+        <span className="challenge-points"> {challenge.points} pts</span>
+        <span className="challenge-solves"> {challenge.solves} solves</span>
       </div>
     </Link>
   );
