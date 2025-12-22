@@ -1,5 +1,10 @@
 import axios from 'axios';
-import type { AxiosInstance, AxiosError } from 'axios';
+import type {
+  AxiosInstance,
+  AxiosError,
+  AxiosResponse,
+  InternalAxiosRequestConfig
+} from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
@@ -11,19 +16,21 @@ const api: AxiosInstance = axios.create({
   withCredentials: true,
 });
 
+// Request interceptor
 api.interceptors.request.use(
-  (config) => {
+  (config: InternalAxiosRequestConfig) => {
     const token = localStorage.getItem('token');
     if (token && config.headers) {
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
-  (error) => Promise.reject(error)
+  (error: AxiosError) => Promise.reject(error)
 );
 
+// Response interceptor
 api.interceptors.response.use(
-  (response) => response,
+  (response: AxiosResponse) => response,
   (error: AxiosError) => {
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
