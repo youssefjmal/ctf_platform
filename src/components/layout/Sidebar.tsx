@@ -6,12 +6,12 @@ const Sidebar: React.FC = () => {
   const location = useLocation();
 
   const categories = [
-    { name: 'All', icon: '🎯', path: '/challenges' },
-    { name: 'Web', icon: '🌐', path: '/challenges?category=web' },
-    { name: 'Crypto', icon: '🔐', path: '/challenges?category=crypto' },
-    { name: 'Reverse', icon: '🔄', path: '/challenges?category=reverse' },
-    { name: 'Forensics', icon: '🔍', path: '/challenges?category=forensics' },
-    { name: 'Pwn', icon: '💥', path: '/challenges?category=pwn' },
+    { name: 'All',  path: '/challenges' },
+    { name: 'Web',  path: '/challenges?category=web' },
+    { name: 'Crypto', path: '/challenges?category=crypto' },
+    { name: 'Reverse', path: '/challenges?category=reverse' },
+    { name: 'Forensics', path: '/challenges?category=forensics' },
+    { name: 'Pwn', icon: '', path: '/challenges?category=pwn' },
   ];
 
   return (
